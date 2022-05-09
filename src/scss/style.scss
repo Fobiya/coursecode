@@ -1,0 +1,729 @@
+// =========================================================== 
+// Import
+// ===========================================================
+//@import "minireset";
+//@import "color";
+@import "font"; 
+@import "grid";
+@import "reset";
+
+
+@import "modules/slick";
+//@import "modules/ionicons";
+@import "modules/fancybox";
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+//@import url('https://awakendhltstg.wpengine.com/wp-content/plugins/vimeo-sync-memberships/css/rvs-user-styles.css?ver=5.3.9');
+//@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css');
+
+:root {
+  --r: 'RoxboroughCF';
+  --l: 'Lato';
+  
+}
+
+
+
+a, p, span, li, strong, input {
+ font-family: var(--u);
+  line-height: 1.2em;
+}
+h1, h2, b, h3, h4, h5, button, label{
+   font-family: var(--v);
+    line-height: 1.2em;
+}
+
+
+
+
+// =========================================================== 
+// END Import
+// ===========================================================   
+
+ 
+// ===========================================================
+// Media
+// ===========================================================
+
+@mixin wid($size) {
+   @if $size == 1500 {
+    @media (min-width: 1500px) { @content; }
+  } @else if $size == 1200-1499 {
+    @media (min-width: 1200px) and (max-width: 1499px) { @content; }
+  } @else if $size == 1200 {
+    @media (min-width: 1200px) { @content; }
+  } @else if $size == 992-1199 {
+    @media (min-width: 992px) and (max-width: 1199px) { @content; }
+  } @else if $size == 992-1300 {
+    @media (min-width: 992px) and (max-width: 1130px) { @content; }
+  } @else if $size == 992{
+    @media (min-width: 992px) { @content; }
+  } @else if $size == 991 {
+    @media (max-width: 991px) { @content; }
+  } @else if $size == 601-991 {
+    @media (min-width: 601px) and (max-width: 991px) { @content; }
+  } @else if $size == 600 {
+    @media (max-width: 600px) { @content; }
+  }@else if $size == 500 {
+    @media (max-width: 500px) { @content; }
+  }@else if $size == 450 {
+    @media (max-width: 450px) { @content; }
+  }@else if $size == 400 {
+    @media (max-width: 400px) { @content; }
+  }@else if $size == 350 {
+    @media (max-width: 350px) { @content; }
+  }
+}
+
+
+//  @include wid(1200)      {   } 
+//  @include wid(992-1199)  {   } 
+//  @include wid(601-991)   {   } 
+//  @include wid(600)       {   } 
+
+// ------------------------------------
+
+//  @include wid(1500) {   }  >
+//  @include wid(1200) {   }  >
+//  @include wid(992)  {   }  >
+//  @include wid(991)  {   }  <
+//  @include wid(600)  {   }  <
+
+
+//  @include wid(500)  {   }  <
+//  @include wid(450)  {   }  <
+//  @include wid(400)  {   }  <
+//  @include wid(350)  {   }  <
+
+// ===========================================================
+// END Media
+// ===========================================================
+
+
+// ===========================================================
+// Before and After
+// ===========================================================
+
+    %bef-aft{
+      content: '';
+      display: block;
+      width: inherit;
+      height: inherit;
+      position: relative;
+      pointer-events: none;
+    }
+
+//    @extend %bef-aft;
+
+// ===========================================================
+// Before and After
+// ===========================================================
+
+// ===========================================================
+// Button ALL
+// ===========================================================
+
+   %button {
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     
+
+
+
+      height: auto;
+     
+      cursor: pointer;
+      border-radius: 0px;
+      border: 0;
+     
+//      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.18);
+      //      letter-spacing: 0.05em;
+      text-decoration: none;
+
+
+      &:hover {
+
+//          background-color: #6e9cb2;
+//          box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.25);
+      }
+      &:focus,
+      &:active {
+//          background-color: #6e9cb2;
+      }
+  }
+
+//  .black{
+//      @extend %button;
+//  }
+
+
+// ===========================================================
+// END Button ALL
+// ===========================================================
+
+
+
+
+.orange{
+    
+  @extend %button;
+  
+  background: #FF6720;
+  
+  color: #000;
+  
+  border-radius: 10px;
+  
+  font: italic 100 15px/1.2em var(--l);
+
+  width: clamp(50px, 100%, 500px);
+  height: 50px;
+  
+
+    &:hover{
+      background: rgb(126, 51, 16);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.31);
+    }
+  
+
+    &:focus,
+    &:active {
+  //          background-color: #6e9cb2;
+    }
+    
+}
+
+
+
+// ===========================================================
+// END keyframes
+// ===========================================================
+
+
+
+// ===========================================================
+// END keyframes
+// ===========================================================
+
+
+// =========================================================== 
+// Scroll BAR
+// =========================================================== 
+
+  .bar-long {
+    height: 3px;
+    width: 0;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--roz);
+    box-shadow: 0 0 15px rgba(33, 32, 32, 0.66);
+
+     @media (max-width:991px){
+           top: inherit;
+       bottom: 0;
+    }
+  }
+
+// =========================================================== 
+// Scroll BAR
+// =========================================================== 
+
+// ===========================================================
+// SLICK STYLE
+// ===========================================================
+
+
+//.section__profile__2 .box__reviews{
+//  
+//
+//
+//.slick-slider {
+//  position: relative;
+//  display: block;
+//  width: 100%;
+//}
+//
+//.slick-list {
+//  position: relative;
+//  display: block;
+//  overflow: hidden;
+//  margin: 0 !important;
+//  padding: 0 !important;
+//
+//  &:focus {
+//    outline: none;
+//  }
+//
+//  &.dragging {
+//    cursor: pointer;
+//    cursor: hand;
+//  }
+//}
+//
+//.slick-slider {
+//  .slick-track,
+//  .slick-list {
+//  }
+//}
+//
+//.slick-track {
+//  position: relative;
+//  top: 0;
+//  left: 0;
+//  display: block;
+//  margin-left: auto;
+//  margin-right: auto;
+//
+//  &:before {
+//    display: table;
+//    content: "";
+//  }
+//
+//  &:after {
+//    display: table;
+//    content: "";
+//    clear: both;
+//  }
+//}
+//
+//.slick-loading .slick-track {
+//  visibility: hidden;
+//}
+//
+//.slick-slide {
+//  display: none;
+//  float: left;
+//  height: 100%;
+//  min-height: 1px;
+//}
+//
+//.home_section_header .slick-slide {
+//  text-align: center;
+//  margin: 20px;
+//}
+//
+//[dir="rtl"] .slick-slide {
+//  float: right;
+//}
+//
+//.slick-slide {
+//  img {
+//    display: block;
+//  }
+//
+//  &.slick-loading img {
+//    display: none;
+//  }
+//
+//  &.dragging img {
+//    pointer-events: none;
+//  }
+//}
+//
+//.slick-initialized .slick-slide {
+//  display: block;
+//}
+//
+//.slick-loading .slick-slide {
+//  visibility: hidden;
+//}
+//
+//.slick-vertical .slick-slide {
+//  display: block;
+//  height: auto;
+//  border: 1px solid transparent;
+//}
+//
+.slick-arrow {
+  &.slick-hidden {
+    display: none;
+  }
+
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 25px;
+  z-index: 3;
+}
+//
+//.slick-slider {
+////  .ion-chevron-right {
+////    right: 10px;
+////  }
+////
+////  .ion-chevron-left {
+////    left: 10px;
+////  }
+//}
+
+  .slick-dots{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    
+    li{
+      width: 10px;
+      height: 10px;
+      background: #e8d7ac;
+      border-radius: 50%;
+      margin: 0px 3.5px;
+      cursor: pointer;
+      opacity: .8;
+      
+      transition: all .7s ease;
+      &.slick-active{
+        opacity: 1;
+             background: #5d4060; 
+        box-shadow: 0 0 15px #5d4060;
+      }
+    }
+    
+    button{
+      display: none;
+    }
+    
+  }
+
+    .block__slider {
+        display: none !important;
+    }
+
+    div.slick-slider.slick-initialized {
+        display: block !important;
+    }
+
+    .slick-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        font-size: 25px;
+        z-index: 3;
+    }
+
+    .slick-slider .ion-chevron-right {
+        right: 0;
+    }
+
+    .slick-slider .ion-chevron-left {
+        left: 0;
+    }
+//  
+//}
+
+// ===========================================================
+// END SLICK STYLE
+// ===========================================================
+
+
+// ===========================================================
+// MENU
+// ===========================================================
+
+// ===========================================================
+// END MENU
+// ===========================================================
+
+
+// ===========================================================
+// cursor
+// ===========================================================
+
+// ===========================================================
+// cursor
+// ===========================================================
+
+
+// ===========================================================
+// Pixel Perfect
+// ===========================================================
+
+.front__end {
+    z-index: -1001 !important;
+    opacity: .5 !important;
+}
+
+.zindex {
+    z-index: -1000 !important;
+}
+
+// ===========================================================
+// END Pixel Perfect
+// ===========================================================
+
+
+// ===========================================================
+// Scroll Style
+// ===========================================================
+
+//*::-webkit-scrollbar{
+//	background: none;
+//	background-color: none;
+//    box-shadow: none;
+//}
+
+//*::-webkit-scrollbar-thumb{
+//	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+//    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+//	background-color: #F5F5F5;
+//	border-radius: 10px;
+//}
+
+//---------------------------------------------------------------------
+
+//    *::-webkit-scrollbar {
+//      display: none;
+//    }
+//
+//    *::-webkit-scrollbar {
+//        width: 10px;
+//      opacity: 0;
+//      transition: all .7s ease;
+//
+//    }
+
+//*::-webkit-scrollbar-track {
+////    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+////    border-radius: 10px;
+//}
+
+//*::-webkit-scrollbar-thumb:hover {
+//    opacity: 1;
+//    border-radius: 10px;
+//    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+//}
+
+// ===========================================================
+// END Scroll Style
+// ===========================================================
+
+
+// ===========================================================
+// HEADER style
+// ===========================================================
+
+    header{
+
+
+    }
+
+
+
+
+
+
+// ===========================================================
+// END HEADER style
+// ===========================================================
+
+
+.right__menu {
+  
+     position: fixed;
+      right: 100%;
+      width: 100%;
+ 
+      height: 100%;
+      z-index: 999;
+      transition: .4s;
+      display: block;
+      will-change: transform;
+      overflow-y: auto;
+
+  
+  
+  &.open {
+    transform: translateX(100%);
+//    box-shadow: 10px 0 15px 0 rgba(0, 0, 0, 0.15);
+    
+         box-shadow: 0  0 20px rgba(255, 250, 245, .5);
+  }
+
+    
+
+
+}
+
+.open__menu{
+  overflow: hidden;
+//  padding-right: 17px;
+//  margin-right: 17px;
+  
+  &:before{
+    @extend %bef-aft;
+
+
+    transition: all .2s ease;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+    z-index: 990;
+    position: absolute;
+
+ }
+}
+
+
+// ===========================================================
+// SECTION style
+// ===========================================================
+
+
+// ===========================================================
+// END SECTION style
+// ===========================================================
+    
+section,footer{
+//  display: none
+}
+
+.home__1,.home__2,.home__3,.home__4,.home__5,.home__6,.home__7,.home__8,.home__9,.home__10{
+//  display: block;
+}
+
+
+
+ section.home__1{
+    
+//      background: #000 url(../img/home__1__back.png) no-repeat top center;
+   
+      background-size: cover;
+//      height: 950px;
+      position: relative;
+    
+      height: 100%;
+    
+//      min-height: 100vh;
+      min-height: 1080px;
+      max-height: 1080px;
+        overflow: hidden;
+     
+ 
+
+
+  @include wid(992){ 
+
+    padding-top: 338px;
+    
+    .container{
+    
+
+    }
+        
+        
+        &>.container:nth-child(2){
+          
+       
+          
+          
+//          display: flex;
+//          align-items: center;
+//          justify-content: center;
+//          width: 100%;
+          
+          &>.row{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+            flex-direction: column;
+          width: 100%;
+//            height: calc(100vh - 340px);
+          }
+        }
+  }
+   
+  @include wid(601-991)   {  
+    
+    padding-top: 245px;
+     
+      min-height: 100vh;
+        height: 100%;
+    
+      .container{
+//         padding-top: 245px;
+          padding-bottom: 70px;
+      }
+   } 
+   
+  @include wid(600)       {  
+       padding-top: 130px;
+      .container{
+//         padding-top: 133px;
+         padding-bottom: 48px;
+      }
+    
+   
+    min-height: 100vh;
+    
+    height: 100%;
+    
+   } 
+
+
+  }     
+
+
+
+
+   
+
+// ===========================================================
+// FORM STYLE
+// ===========================================================
+
+// ===========================================================
+// END FORM STYLE
+// ===========================================================
+
+
+// ===========================================================
+// FOOTER style
+// ===========================================================
+
+
+  footer{
+    
+    position: relative;
+    background: #5D4060;
+
+
+  }
+
+
+// ===========================================================
+// END FOOTER style
+// ===========================================================
+
+
+
+// ===========================================================
+// @media element
+// ===========================================================
+
+
+  [class*='section__']{ 
+
+    @include wid(1200){
+      padding: 150px 0;
+    }
+    @include wid(992-1199){
+      padding: 100px 0;
+
+    }
+    @include wid(601-991){
+      padding: 70px 0;
+    }
+    @include wid(600) {
+      padding: 48px 0;
+    }
+  }
+
+// ===========================================================
+// END @media element
+// ===========================================================

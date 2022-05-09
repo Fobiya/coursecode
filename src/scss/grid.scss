@@ -1,0 +1,1658 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+	padding: 0;
+	border: 0;
+//	font-size: 100%;
+//	font: inherit;
+	vertical-align: baseline;
+}
+
+/* make sure to set some focus styles for accessibility */
+:focus {
+    outline: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input[type=search] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    max-width: 100%;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+
+[hidden] {
+    display: none;
+}
+
+
+
+/**
+   * Remove the margin in all browsers (opinionated).
+   */
+
+body {
+    margin: 0;
+padding: 0;
+}
+
+
+/**
+   * Add the correct display in IE 9-.
+   */
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+    display: block;
+}
+
+figcaption,
+figure,
+main {
+    /* 1 */
+    display: block;
+}
+
+
+/**
+   * Add the correct margin in IE 8.
+   */
+
+figure {
+    margin: 1em 40px;
+}
+
+
+/**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+
+hr {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    /* 1 */
+    height: 0;
+    /* 1 */
+    overflow: visible;
+    /* 2 */
+    height: 4px;
+    overflow: visible;
+    border: 0;
+    background: #fff;
+    margin: 20px 0;
+}
+
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+
+pre {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
+}
+
+
+/* Text-level semantics
+     ========================================================================== */
+
+
+/**
+   * 1. Remove the gray background on active links in IE 10.
+   * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+   */
+
+a {
+    /* 1 */
+    -webkit-text-decoration-skip: objects;
+    /* 2 */
+}
+
+
+/**
+   * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+
+abbr[title] {
+    border-bottom: none;
+    /* 1 */
+    text-decoration: underline;
+    /* 2 */
+    -webkit-text-decoration: underline dotted;
+    -moz-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+    /* 2 */
+}
+
+
+/**
+   * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+   */
+
+b,
+strong {
+    font-weight: inherit;
+}
+
+
+/**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
+}
+
+
+/**
+   * Add the correct font style in Android 4.3-.
+   */
+
+dfn {
+    font-style: italic;
+}
+
+
+/**
+   * Add the correct background and color in IE 9-.
+   */
+
+mark {
+    background-color: #ff0;
+    color: #000;
+}
+
+
+/**
+   * Add the correct font size in all browsers.
+   */
+
+small {
+    font-size: 80%;
+}
+
+
+/**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+
+/* Embedded content
+     ========================================================================== */
+
+
+/**
+   * Add the correct display in IE 9-.
+   */
+
+audio,
+video {
+    display: inline-block;
+}
+
+
+/**
+   * Add the correct display in iOS 4-7.
+   */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+
+/**
+   * Remove the border on images inside links in IE 10-.
+   */
+
+img {
+    border-style: none;
+}
+
+
+/**
+   * Hide the overflow in IE.
+   */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+
+/* Forms
+     ========================================================================== */
+
+
+/**
+   * 1. Change the font styles in all browsers (opinionated).
+   * 2. Remove the margin in Firefox and Safari.
+   */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: sans-serif;
+    /* 1 */
+    font-size: 100%;
+    /* 1 */
+    line-height: 1.15;
+    /* 1 */
+    margin: 0;
+    /* 2 */
+}
+
+
+/**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+
+button,
+input {
+    /* 1 */
+    overflow: visible;
+}
+
+
+/**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+
+button,
+select {
+    /* 1 */
+    text-transform: none;
+}
+
+
+/**
+   * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+   *    controls in Android 4.
+   * 2. Correct the inability to style clickable types in iOS and Safari.
+   */
+
+
+/**
+   * Remove the inner border and padding in Firefox.
+   */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+
+/**
+   * Restore the focus styles unset by the previous rule.
+   */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+
+/**
+   * Correct the padding in Firefox.
+   */
+
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+
+
+/**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+
+legend {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /* 1 */
+    color: inherit;
+    /* 2 */
+    display: table;
+    /* 1 */
+    max-width: 100%;
+    /* 1 */
+    padding: 0;
+    /* 3 */
+    white-space: normal;
+    /* 1 */
+}
+
+
+/**
+   * 1. Add the correct display in IE 9-.
+   * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+
+progress {
+    display: inline-block;
+    /* 1 */
+    vertical-align: baseline;
+    /* 2 */
+}
+
+
+/**
+   * Remove the default vertical scrollbar in IE.
+   */
+
+textarea {
+    overflow: auto;
+}
+
+
+/**
+   * 1. Add the correct box sizing in IE 10-.
+   * 2. Remove the padding in IE 10-.
+   */
+
+[type="checkbox"],
+[type="radio"] {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /* 1 */
+    padding: 0;
+    /* 2 */
+}
+
+
+/**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+
+[type="number"] {
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        height: auto;
+    }
+}
+
+
+/**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+
+[type="search"] {
+    -webkit-appearance: textfield;
+    /* 1 */
+    outline-offset: -2px;
+    /* 2 */
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-decoration {
+        -webkit-appearance: none;
+    }
+}
+
+
+/**
+   * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+   */
+
+
+/**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+
+ ::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    /* 1 */
+    font: inherit;
+    /* 2 */
+}
+
+
+/* Interactive
+     ========================================================================== */
+
+
+/*
+   * Add the correct display in IE 9-.
+   * 1. Add the correct display in Edge, IE, and Firefox.
+   */
+
+details,
+menu {
+    display: block;
+}
+
+
+/*
+   * Add the correct display in all browsers.
+   */
+
+summary {
+    display: list-item;
+}
+
+
+/* Scripting
+     ========================================================================== */
+
+
+/**
+   * Add the correct display in IE 9-.
+   */
+
+canvas {
+    display: inline-block;
+}
+
+
+/**
+   * Add the correct display in IE.
+   */
+
+template,
+[hidden] {
+    display: none;
+}
+
+
+/* Hidden
+     ========================================================================== */
+
+
+/**
+   * Add the correct display in IE 10-.
+   */
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+    &:before,
+    &:after {
+        -webkit-box-sizing: inherit;
+        box-sizing: inherit;
+    }
+}
+
+ul:not(.browser-default) {
+    padding-left: 0;
+    list-style-type: none;
+    >li {
+        list-style-type: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.valign-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.z-depth-0 {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+
+/* 2dp elevation modified*/
+
+.z-depth-1,
+
+/*nav,*/
+
+.card-panel,
+.card,
+.toast,
+.btn,
+.btn-large,
+.btn-floating,
+.dropdown-content,
+.collapsible,
+.sidenav {
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.z-depth-1-half,
+.btn:hover,
+.btn-large:hover,
+.btn-floating:hover {
+    -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+}
+
+
+/* 6dp elevation modified*/
+
+.z-depth-2 {
+    -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
+
+
+/* 12dp elevation modified*/
+
+.z-depth-3 {
+    -webkit-box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+}
+
+
+/* 16dp elevation */
+
+.z-depth-4 {
+    -webkit-box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -7px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -7px rgba(0, 0, 0, 0.2);
+}
+
+
+/* 24dp elevation */
+
+.z-depth-5,
+.modal {
+    -webkit-box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+}
+
+.hoverable {
+    -webkit-transition: -webkit-box-shadow .25s;
+    transition: -webkit-box-shadow .25s;
+    transition: box-shadow .25s;
+    transition: box-shadow .25s, -webkit-box-shadow .25s;
+    &:hover {
+        -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+}
+
+.divider {
+    height: 1px;
+    overflow: hidden;
+    background-color: #e0e0e0;
+}
+
+blockquote {
+    margin: 20px 0;
+    padding-left: 1.5rem;
+    border-left: 5px solid #ee6e73;
+}
+
+img.responsive-img,
+video.responsive-video {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*******************
+    Utility Classes
+  *******************/
+
+.hide {
+    display: none !important;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.center,
+.center-align {
+    text-align: center;
+}
+
+.left {
+    float: left !important;
+}
+
+.right {
+    float: right !important;
+}
+
+.no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input[type=range] {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    +.thumb {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.truncate {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+
+/* This is needed for some mobile phones to display the Google Icon font properly */
+
+.container {
+    margin: 0 auto;
+      max-width: 1440px;
+  z-index: 2;
+  position: relative;
+}
+
+@media only screen and (min-width: 601px) {
+    .container {
+        width: 95%;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .container {
+        width: 90%;
+    }
+}
+
+.col .row {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  @media  only screen and (max-width: 600px) {
+        margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}
+
+.section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    &.no-pad {
+        padding: 0;
+    }
+    &.no-pad-bot {
+        padding-bottom: 0;
+    }
+    &.no-pad-top {
+        padding-top: 0;
+    }
+}
+
+.row {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+  
+      &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .col {
+  @media  only screen and (max-width: 600px) {
+      padding: 0 .8rem;
+  }
+        float: left;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0 0.75rem;
+        min-height: 1px;
+        &[class*="push-"],
+        &[class*="pull-"] {
+            position: relative;
+        }
+        &.s1 {
+            width: 8.3333333333%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.s2 {
+            width: 16.6666666667%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.s3 {
+            width: 25%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.s4 {
+            width: 33.3333333333%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.s5 {
+            width: 41.6666666667%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.s6 {
+            width: 50%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.s7 {
+            width: 58.3333333333%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.s8 {
+            width: 66.6666666667%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.s9 {
+            width: 75%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.s10 {
+            width: 83.3333333333%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.s11 {
+            width: 91.6666666667%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.s12 {
+            width: 100%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.offset-s1 {
+            margin-left: 8.3333333333%;
+        }
+        &.pull-s1 {
+            right: 8.3333333333%;
+        }
+        &.push-s1 {
+            left: 8.3333333333%;
+        }
+        &.offset-s2 {
+            margin-left: 16.6666666667%;
+        }
+        &.pull-s2 {
+            right: 16.6666666667%;
+        }
+        &.push-s2 {
+            left: 16.6666666667%;
+        }
+        &.offset-s3 {
+            margin-left: 25%;
+        }
+        &.pull-s3 {
+            right: 25%;
+        }
+        &.push-s3 {
+            left: 25%;
+        }
+        &.offset-s4 {
+            margin-left: 33.3333333333%;
+        }
+        &.pull-s4 {
+            right: 33.3333333333%;
+        }
+        &.push-s4 {
+            left: 33.3333333333%;
+        }
+        &.offset-s5 {
+            margin-left: 41.6666666667%;
+        }
+        &.pull-s5 {
+            right: 41.6666666667%;
+        }
+        &.push-s5 {
+            left: 41.6666666667%;
+        }
+        &.offset-s6 {
+            margin-left: 50%;
+        }
+        &.pull-s6 {
+            right: 50%;
+        }
+        &.push-s6 {
+            left: 50%;
+        }
+        &.offset-s7 {
+            margin-left: 58.3333333333%;
+        }
+        &.pull-s7 {
+            right: 58.3333333333%;
+        }
+        &.push-s7 {
+            left: 58.3333333333%;
+        }
+        &.offset-s8 {
+            margin-left: 66.6666666667%;
+        }
+        &.pull-s8 {
+            right: 66.6666666667%;
+        }
+        &.push-s8 {
+            left: 66.6666666667%;
+        }
+        &.offset-s9 {
+            margin-left: 75%;
+        }
+        &.pull-s9 {
+            right: 75%;
+        }
+        &.push-s9 {
+            left: 75%;
+        }
+        &.offset-s10 {
+            margin-left: 83.3333333333%;
+        }
+        &.pull-s10 {
+            right: 83.3333333333%;
+        }
+        &.push-s10 {
+            left: 83.3333333333%;
+        }
+        &.offset-s11 {
+            margin-left: 91.6666666667%;
+        }
+        &.pull-s11 {
+            right: 91.6666666667%;
+        }
+        &.push-s11 {
+            left: 91.6666666667%;
+        }
+        &.offset-s12 {
+            margin-left: 100%;
+        }
+        &.pull-s12 {
+            right: 100%;
+        }
+        &.push-s12 {
+            left: 100%;
+        }
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .row .col {
+        &.m1 {
+            width: 8.3333333333%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.m2 {
+            width: 16.6666666667%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.m3 {
+            width: 25%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.m4 {
+            width: 33.3333333333%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.m5 {
+            width: 41.6666666667%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.m6 {
+            width: 50%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.m7 {
+            width: 58.3333333333%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.m8 {
+            width: 66.6666666667%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.m9 {
+            width: 75%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.m10 {
+            width: 83.3333333333%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.m11 {
+            width: 91.6666666667%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.m12 {
+            width: 100%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.offset-m1 {
+            margin-left: 8.3333333333%;
+        }
+        &.pull-m1 {
+            right: 8.3333333333%;
+        }
+        &.push-m1 {
+            left: 8.3333333333%;
+        }
+        &.offset-m2 {
+            margin-left: 16.6666666667%;
+        }
+        &.pull-m2 {
+            right: 16.6666666667%;
+        }
+        &.push-m2 {
+            left: 16.6666666667%;
+        }
+        &.offset-m3 {
+            margin-left: 25%;
+        }
+        &.pull-m3 {
+            right: 25%;
+        }
+        &.push-m3 {
+            left: 25%;
+        }
+        &.offset-m4 {
+            margin-left: 33.3333333333%;
+        }
+        &.pull-m4 {
+            right: 33.3333333333%;
+        }
+        &.push-m4 {
+            left: 33.3333333333%;
+        }
+        &.offset-m5 {
+            margin-left: 41.6666666667%;
+        }
+        &.pull-m5 {
+            right: 41.6666666667%;
+        }
+        &.push-m5 {
+            left: 41.6666666667%;
+        }
+        &.offset-m6 {
+            margin-left: 50%;
+        }
+        &.pull-m6 {
+            right: 50%;
+        }
+        &.push-m6 {
+            left: 50%;
+        }
+        &.offset-m7 {
+            margin-left: 58.3333333333%;
+        }
+        &.pull-m7 {
+            right: 58.3333333333%;
+        }
+        &.push-m7 {
+            left: 58.3333333333%;
+        }
+        &.offset-m8 {
+            margin-left: 66.6666666667%;
+        }
+        &.pull-m8 {
+            right: 66.6666666667%;
+        }
+        &.push-m8 {
+            left: 66.6666666667%;
+        }
+        &.offset-m9 {
+            margin-left: 75%;
+        }
+        &.pull-m9 {
+            right: 75%;
+        }
+        &.push-m9 {
+            left: 75%;
+        }
+        &.offset-m10 {
+            margin-left: 83.3333333333%;
+        }
+        &.pull-m10 {
+            right: 83.3333333333%;
+        }
+        &.push-m10 {
+            left: 83.3333333333%;
+        }
+        &.offset-m11 {
+            margin-left: 91.6666666667%;
+        }
+        &.pull-m11 {
+            right: 91.6666666667%;
+        }
+        &.push-m11 {
+            left: 91.6666666667%;
+        }
+        &.offset-m12 {
+            margin-left: 100%;
+        }
+        &.pull-m12 {
+            right: 100%;
+        }
+        &.push-m12 {
+            left: 100%;
+        }
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    .row .col {
+        &.l1 {
+            width: 8.3333333333%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.l2 {
+            width: 16.6666666667%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.l3 {
+            width: 25%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.l4 {
+            width: 33.3333333333%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.l5 {
+            width: 41.6666666667%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.l6 {
+            width: 50%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.l7 {
+            width: 58.3333333333%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.l8 {
+            width: 66.6666666667%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.l9 {
+            width: 75%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.l10 {
+            width: 83.3333333333%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.l11 {
+            width: 91.6666666667%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.l12 {
+            width: 100%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.offset-l1 {
+            margin-left: 8.3333333333%;
+        }
+        &.pull-l1 {
+            right: 8.3333333333%;
+        }
+        &.push-l1 {
+            left: 8.3333333333%;
+        }
+        &.offset-l2 {
+            margin-left: 16.6666666667%;
+        }
+        &.pull-l2 {
+            right: 16.6666666667%;
+        }
+        &.push-l2 {
+            left: 16.6666666667%;
+        }
+        &.offset-l3 {
+            margin-left: 25%;
+        }
+        &.pull-l3 {
+            right: 25%;
+        }
+        &.push-l3 {
+            left: 25%;
+        }
+        &.offset-l4 {
+            margin-left: 33.3333333333%;
+        }
+        &.pull-l4 {
+            right: 33.3333333333%;
+        }
+        &.push-l4 {
+            left: 33.3333333333%;
+        }
+        &.offset-l5 {
+            margin-left: 41.6666666667%;
+        }
+        &.pull-l5 {
+            right: 41.6666666667%;
+        }
+        &.push-l5 {
+            left: 41.6666666667%;
+        }
+        &.offset-l6 {
+            margin-left: 50%;
+        }
+        &.pull-l6 {
+            right: 50%;
+        }
+        &.push-l6 {
+            left: 50%;
+        }
+        &.offset-l7 {
+            margin-left: 58.3333333333%;
+        }
+        &.pull-l7 {
+            right: 58.3333333333%;
+        }
+        &.push-l7 {
+            left: 58.3333333333%;
+        }
+        &.offset-l8 {
+            margin-left: 66.6666666667%;
+        }
+        &.pull-l8 {
+            right: 66.6666666667%;
+        }
+        &.push-l8 {
+            left: 66.6666666667%;
+        }
+        &.offset-l9 {
+            margin-left: 75%;
+        }
+        &.pull-l9 {
+            right: 75%;
+        }
+        &.push-l9 {
+            left: 75%;
+        }
+        &.offset-l10 {
+            margin-left: 83.3333333333%;
+        }
+        &.pull-l10 {
+            right: 83.3333333333%;
+        }
+        &.push-l10 {
+            left: 83.3333333333%;
+        }
+        &.offset-l11 {
+            margin-left: 91.6666666667%;
+        }
+        &.pull-l11 {
+            right: 91.6666666667%;
+        }
+        &.push-l11 {
+            left: 91.6666666667%;
+        }
+        &.offset-l12 {
+            margin-left: 100%;
+        }
+        &.pull-l12 {
+            right: 100%;
+        }
+        &.push-l12 {
+            left: 100%;
+        }
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    .row .col {
+        &.xl1 {
+            width: 8.3333333333%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.xl2 {
+            width: 16.6666666667%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.xl3 {
+            width: 25%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.xl4 {
+            width: 33.3333333333%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.xl5 {
+            width: 41.6666666667%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.xl6 {
+            width: 50%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.xl7 {
+            width: 58.3333333333%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.xl8 {
+            width: 66.6666666667%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.xl9 {
+            width: 75%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.xl10 {
+            width: 83.3333333333%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.xl11 {
+            width: 91.6666666667%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.xl12 {
+            width: 100%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+        &.offset-xl1 {
+            margin-left: 8.3333333333%;
+        }
+        &.pull-xl1 {
+            right: 8.3333333333%;
+        }
+        &.push-xl1 {
+            left: 8.3333333333%;
+        }
+        &.offset-xl2 {
+            margin-left: 16.6666666667%;
+        }
+        &.pull-xl2 {
+            right: 16.6666666667%;
+        }
+        &.push-xl2 {
+            left: 16.6666666667%;
+        }
+        &.offset-xl3 {
+            margin-left: 25%;
+        }
+        &.pull-xl3 {
+            right: 25%;
+        }
+        &.push-xl3 {
+            left: 25%;
+        }
+        &.offset-xl4 {
+            margin-left: 33.3333333333%;
+        }
+        &.pull-xl4 {
+            right: 33.3333333333%;
+        }
+        &.push-xl4 {
+            left: 33.3333333333%;
+        }
+        &.offset-xl5 {
+            margin-left: 41.6666666667%;
+        }
+        &.pull-xl5 {
+            right: 41.6666666667%;
+        }
+        &.push-xl5 {
+            left: 41.6666666667%;
+        }
+        &.offset-xl6 {
+            margin-left: 50%;
+        }
+        &.pull-xl6 {
+            right: 50%;
+        }
+        &.push-xl6 {
+            left: 50%;
+        }
+        &.offset-xl7 {
+            margin-left: 58.3333333333%;
+        }
+        &.pull-xl7 {
+            right: 58.3333333333%;
+        }
+        &.push-xl7 {
+            left: 58.3333333333%;
+        }
+        &.offset-xl8 {
+            margin-left: 66.6666666667%;
+        }
+        &.pull-xl8 {
+            right: 66.6666666667%;
+        }
+        &.push-xl8 {
+            left: 66.6666666667%;
+        }
+        &.offset-xl9 {
+            margin-left: 75%;
+        }
+        &.pull-xl9 {
+            right: 75%;
+        }
+        &.push-xl9 {
+            left: 75%;
+        }
+        &.offset-xl10 {
+            margin-left: 83.3333333333%;
+        }
+        &.pull-xl10 {
+            right: 83.3333333333%;
+        }
+        &.push-xl10 {
+            left: 83.3333333333%;
+        }
+        &.offset-xl11 {
+            margin-left: 91.6666666667%;
+        }
+        &.pull-xl11 {
+            right: 91.6666666667%;
+        }
+        &.push-xl11 {
+            left: 91.6666666667%;
+        }
+        &.offset-xl12 {
+            margin-left: 100%;
+        }
+        &.pull-xl12 {
+            right: 100%;
+        }
+        &.push-xl12 {
+            left: 100%;
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    line-height: 1em;
+    font-weight: normal;
+}
+
+button:focus {
+    outline: none;
+}
+
+label {
+    font-size: 0.8rem;
+}
+
+
+/***************************************  ORDER ***********************************************/
+
+.row {}
+
+div:nth-child(1) {}
+
+div:nth-child(2) {}
+
+div:nth-child(3) {}
+
+div:nth-child(4) {}
+
+div:nth-child(5) {}
+
+
+/*************************************** END  ORDER ***********************************************/

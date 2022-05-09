@@ -1,0 +1,58 @@
+$gu: Gilroy-UltraLight
+$gl: Gilroy-Light
+$v: VickeyRegular
+$s: Gilroy-Semibold
+$d: Gilroy-Bold
+$m: Gilroy-Medium
+$r: RoxboroughCF
+
+// ===========================================================
+
+//$fm: FuturaMediumC
+//$fd: FuturaDemiC
+//$fl: FuturaLightC
+//$p: ProbaPro-Medium
+
+//$i: NotoSans-Italic
+//$icon: ionicons
+
+// ===========================================================
+// NotoSans FONTS
+// ===========================================================
+
+$font-list: $r
+//$font-list: $icon
+//
+=font-includ
+  @each $font-name in $font-list
+    @font-face
+      font-family: $font-name
+      src: url("../fonts/#{$font-name}/#{$font-name}.woff2") format("woff2"), url("../fonts/#{$font-name}/#{$font-name}.woff") format("woff"), url("../fonts/#{$font-name}/#{$font-name}.ttf") format("truetype"), url("../fonts/#{$font-name}/#{$font-name}.eot") format("eot"),
+
++font-includ
+
+// ===========================================================
+// END NotoSans FONTS
+// ===========================================================
+
+// ===========================================================
+// ionicons FONT
+// ===========================================================
+
+//$icon-list: $icon
+//
+//=font-icon-includ
+//  @each $icon-name in $icon-list
+//    @font-face
+//
+//      font-family: $icon;
+//      font-style: normal;
+//      font-weight: 400;
+//      src: url(../fonts/#{$icon-name}/#{$icon-name}.eot?#iefix) format("embedded-opentype"), url(../fonts/#{$icon-name}/#{$icon-name}.woff) format("woff"), url(../fonts/#{$icon-name}/#{$icon-name}.ttf) format("truetype")
+//
+//
+//+font-icon-includ
+
+// ===========================================================
+// END ionicons FONT
+// ===========================================================

@@ -1,0 +1,244 @@
+// Default
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+// Links
+a {
+  text-decoration: none;
+  &:active, &:hover {
+    outline: 0;
+  }
+}
+
+// List
+ul, li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Headlines
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
+
+// Default
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: border-box; }
+:focus { outline: 0; }
+
+img, audio, video { max-width: 100%; height: auto; }
+audio, canvas, iframe, video, img, svg { vertical-align: middle; }
+iframe { border: 0 }
+
+// From
+textarea {
+  resize: none; /*remove the resize handle on the bottom right*/
+  overflow: auto;
+  vertical-align: top;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+input, textarea, select, button { outline: none; border: none; font-size: 100%; margin: 0;}
+button, input { line-height: normal; }
+
+// Table
+table { border-collapse: collapse; border-spacing: 0; }
+td, th { padding: 0; text-align: left; }
+
+
+
+
+
+
+
+/*  not reset */
+
+
+.fancybox-active{
+  overflow: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html {
+    line-height: 1em;
+    /* 1 */
+    -ms-text-size-adjust: 100%;
+    /* 2 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */
+    @media only screen and (max-width: 299px) {
+        height: 100vh;
+        width: 100vw;
+    }
+}
+
+
+
+
+*:active,
+*:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+*::-webkit-input-placeholder,
+*:-moz-placeholder,
+*::-moz-placeholder,
+*:-ms-input-placeholder {
+    opacity: 1;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+input::-ms-clear{
+	display:none;
+	width:0;
+	height:0;
+}
+
+input::-ms-reveal{
+	display:none;
+	width:0;
+	height:0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+a {
+//  cursor: none;
+//    text-decoration: none;
+}
+
+ul,li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul,ol{
+    li:last-child{
+//        padding-bottom: 0 !important;
+//        margin-bottom: 0 !important; 
+    }
+}
+
+img,*:before,*:after{
+  pointer-events: none;
+}
+img{
+  max-width: 100%;
+}
+
+span{
+    display: block;
+    position: relative;
+}
+
+.overflow{
+    overflow: hidden !important;
+}
+.cursor{
+    cursor: pointer;
+}
+
+[class*="see"] {
+    display: block;
+}
+
+.none {
+    display: none !important;
+}
+
+
+
+a,
+button,
+select {
+    outline: none !important;
+}
+
+.clearfix:after,
+.clearfix:before {
+    display: table;
+    content: " ";
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+input,
+textarea {
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+}
+
+button:hover {
+//    cursor: pointer;
+}
+
+a,
+button,
+input,
+textarea,i {
+    text-decoration: none;
+    outline: 0;
+    border: 0;
+    transition: all .4s ease !important;
+}
+
+svg{
+  transition: all .4s ease;
+  path{
+    transition: all .4s ease;
+  }
+}
+    
+
+a,
+button {
+//    cursor: pointer;
+}
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 0;
+}
+
+

@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>23423424234</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="static/ico" href="img/favicon.ico?v=13">
+    <meta property="og:url" content="https://Coursecode/">
+    <meta property="og:image" content="img/ogg.png?v=1.3">
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+    <meta property="og:title" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="#{title}">
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
+
+</head>
+
+<body class="info">
+    <header class="none">
+        <div class="box_logo"><img src="img/Craft-logo.svg" alt="Craft-logo"></div>
+        <div class="box_information">
+            <p>My Designs / <span>Unnamed design</span> (Saved 3 minutes ago. Save now)</p>
+        </div>
+        <div class="men__"><a class="download" onclick="exportToSvg();">Download</a><a class="profile" href="javascript:;">Profile</a></div>
+    </header>
+    <div class="static__menu">
+      <ul>
+       <li><a href="javascript:;" class="open__back">Edit Background</a><img src="img/static__menu__back.png" alt="static__menu__back"></li>
+       <li><a href="javascript:;" class="open__img">Add Text</a><img src="img/static__menu__text.png" alt="static__menu__text"></li>
+       <li><a href="javascript:;" class="open__text">Add Image</a><img src="img/static__menu__imag.png" alt="static__menu__imag"></li>
+      </ul>
+    </div>
+
+    <div class="item-selected ">
+        <div id='i-text' class="item-panel">
+            <div id="general-controls">
+
+                <div class="box__select">
+                    <select id="font-family">
+                        <option value="Poppins">Poppins</option>
+                        <option value="Lobster">Lobster</option>
+                        <option value="Futura">Futura</option>
+                        <option value="Courier">Courier</option>
+                        <option value="Exo 2">Exo 2</option>
+                        <option value="Open Sans">Open Sans</option>
+                        <option value="Roboto Slab">Roboto Slab</option>
+                        <option value="Roboto Mono">Roboto Mono</option>
+                        <option value="Montseratt">Montseratt</option>
+                        <option value="Mohave">Mohave</option>
+                        <option value="Mochiy Pop One">Mochiy Pop One</option>
+                        <option value="Red Hat Mono">Red Hat Mono</option>
+                        <option value="Oswald">Oswald</option>
+                        <option value="Raleway">Raleway</option>
+                        <option value="Playfair Display">Playfair Display</option>
+                        <option value="Incosolata">Incosolata</option>
+                        <option value="Josefin Sans">Josefin Sans</option>
+                        <option value="Dancing Script">Dancing Script</option>
+
+                    </select>
+                </div>
+                <div class="box__select">
+                    <select id="font-size">
+                        <option value="10">10px</option>
+                        <option value="20">20px</option>
+                        <option value="40">40px</option>
+                        <option value="100">100px</option>
+                    </select>
+                </div>
+
+                <div class="color__box">
+
+                    <div id="image" class="item-panel-color">
+                        <input type="color" value="#000000" id="fill-color" class="color" onclick="clickColor()" size="10" >
+                    </div>
+                    
+                    <input class='gradient' id='gradient' type="text" value="#000000">
+               
+                
+                </div>
+
+                <div id="text-controls-additional">
+                    <div class="box__select__not__icon">
+                        <input type='checkbox' name='fonttype' id="text-cmd-bold">
+                        <label class="text-control icon-bold" for="text-cmd-bold"> </label>
+                    </div>
+                    <div class="box__select__not__icon">
+                        <input type='checkbox' name='fonttype' id="text-cmd-italic">
+                        <label class="text-control icon-italic" for="text-cmd-italic"> </label>
+                    </div>
+
+                    <div class="box__select__not__icon">
+                        <input type='checkbox' name='fonttype' id="text-cmd-underline">
+                        <label class="text-control icon-underline" for="text-cmd-underline"> </label>
+                    </div>
+                    <div class="box__select__not__icon">
+                        <input type='checkbox' name='fonttype' id="text-cmd-linethrough">
+                        <label class="text-control icon-linethrough" for="text-cmd-linethrough"> </label>
+                    </div>
+
+                </div>
+                
+              <div id="text-aligen-center">
+                <div class="box__select__not__icon">
+                    <input type='checkbox' name='fonttype' id="text-cmd-left">
+                     <label class="text-control icon-text-cmd-left" for="text-cmd-left"></label> 
+                </div>
+
+              <div class="box__select__not__icon">
+
+                    <input type='checkbox' name='fonttype' id="text-cmd-center">
+                    <label class="text-control icon-text-cmd-center" for="text-cmd-center"></label> 
+              </div>
+
+               <div class="box__select__not__icon">
+                    <input type='checkbox' name='fonttype' id="text-cmd-right">
+                  <label class="text-control icon-text-cmd-right" for="text-cmd-right"></label> 
+              </div>
+              
+              <button id="zoomIn">+</button>
+<button id="zoomOut">-</button>
+              
+              </div>
+            </div>
+
+
+            <div id="color-controls">
+
+                <div id="color-list">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="left__menu">
+       <a href="javascript:;" class="close"><img src="img/icon-close.svg" alt="Craft-logo"></a>
+        <div class="left__background">
+            <a class=" title" href="javascript:;">Edit Background</a>
+            <div class="box__content">
+                <div class="tab__background">
+                    <a class="color" href="" data-num="1">Color</a>
+                    <a class="gradient" href="" data-num="2">Gradient</a>
+                    <a class="unsplash" href="" data-num="3">Unsplash</a>
+                    <a class="image open" href="" data-num="4">Image</a>
+                </div>
+                <div class="tab__contents">
+                    <div class="tab__section__color">color</div>
+                    <div class="tab__section__gradient">gradient</div>
+                    <div class="tab__section__image open">
+                        <div id="list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="left__image">
+            <a class="title" href="javascript:;">Add Image</a>
+            <div class="box__content">
+                <a class="back" href="javascript:;">Change template</a>
+                <div class="change_template_subsection">
+                    <a href="stage1.html"><img class="arrow_back" src="/img/icon_back.svg">Change template</a>
+                </div>
+
+                <div class="controls_subsection">
+                    <div class="controls">
+                        <a id="add" class="category-item" onclick="addText()">Add title</a>
+                        <a id="add" class="category-item" onclick="addDescription()">Add description</a>
+                        <a id="add" class="category-item" onclick="addLink()">Add link</a>
+                    </div>
+                </div>
+                <a class="category-item" href="#popup2">Import</a>
+            </div>
+        </div>
+        <div class="left__text">
+            <a class="title" href="javascript:;">Add Text</a>
+
+        </div>
+    </div>
+
+    <div class="box__canvas">
+        <div class="block__">
+
+            <div class="canvas__section" style="border:1px solid #E5E5E5">
+                <canvas id="c" style="border:1px solid #E5E5E5"></canvas>
+
+            </div>
+            <span class="size-img">700 x 500 px</span>
+        </div>
+
+
+    </div>
+
+
+
+    <div id="popup2" class="overlay" href="#">
+        <div class="popup">
+            <div class="header-container">
+                <h2>Import a design</h2>
+                <a class="close" href="#">&times;</a>
+            </div>
+            <div class="container-modal">
+                <div class="import-zone">
+                    <div class="accept">
+                        <p class="warning">
+                            En important une image, vous confirmez qu’elle ne va ni à l’encontre de la loi ni des droits de tiers. Vous pouvez <a href="">ici</a> en savoir davantage sur les motifs de refus de SlashAll.</p>
+                        <div class="toggle-contain">
+                            <div id="toggle">
+                                <div class="inner-container">
+                                    <div class="toggle">
+                                        <p>Yes</p>
+                                    </div>
+                                    <div class="toggle">
+                                        <p>No</p>
+                                    </div>
+                                </div>
+                                <div class="inner-container" id='toggle-container'>
+                                    <div class="toggle">
+                                        <p>Yes</p>
+                                    </div>
+                                    <div class="toggle">
+                                        <p>No</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <label id="largeFile" for="file">
+                        <input type="file" onchange="loadFile(event)" id="file" /> Import a file
+                    </label>
+
+                </div>
+                <div class="content-imported">
+                    <img id="output" />
+                </div>
+            </div>
+            <div class="container-button">
+                <button onclick="importFile()">import</button>
+                <button onclick="importSVG()">svg</button>
+                <button onclick="importJson()">Json</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src='https://unpkg.com/fabric@4.0.0-rc.1/dist/fabric.js'></script>
+
+
+    <script>
+
+    document.addEventListener('DOMContentLoaded', function(){
+    jQuery(document).ready( function($){
+
+        if (window.location.href.indexOf("frame1080x1080") > -1) {
+            $(".block__").css("transform", "scale(.5)");
+            $(".size-img").text("1080x1080 px");
+        } else if (window.location.href.indexOf("frame1080x1920") > -1) {
+            $(".block__").css("transform", "scale(.35)");
+            $(".size-img").text("1080x1920 px");
+        } else if (window.location.href.indexOf("frame940x788") > -1) {
+            $(".block__").css("transform", "scale(.6)");
+            $(".size-img").text("940x788 px");
+        } else if (window.location.href.indexOf("frame1191x1684") > -1) {
+            $(".block__").css("transform", "scale(.4)");
+            $(".size-img").text("1191x1684 px");
+        } else if (window.location.href.indexOf("frame1280x720") > -1) {
+            $(".block__").css("transform", "scale(.6)");
+            $(".size-img").text("1280x720 px");
+        } else if (window.location.href.indexOf("frame800x800") > -1) {
+            $(".block__").css("transform", "scale(.6)");
+            $(".size-img").text("800x800 px");
+        } else if (window.location.href.indexOf("frame851x315") > -1) {
+            $(".block__").css("transform", "scale(.8)");
+            $(".size-img").text("851x315 px");
+        } else if (window.location.href.indexOf("frame2560x1440") > -1) {
+            $(".block__").css("transform", "scale(.3)");
+            $(".size-img").text("2560x1440 px");
+        } else if (window.location.href.indexOf("frame735x1102") > -1) {
+            $(".block__").css("transform", "scale(.6)");
+            $(".size-img").text("735x1102 px");
+        } else if (window.location.href.indexOf("frame1200x628") > -1) {
+            $(".block__").css("transform", "scale(.6)");
+            $(".size-img").text("1200x628 px");
+        } else if (window.location.href.indexOf("frame1024x512") > -1) {
+            $(".block__").css("transform", "scale(.8)");
+            $(".size-img").text("1024x512 px");
+        } else if (window.location.href.indexOf("frame1200x600") > -1) {
+            $(".block__").css("transform", "scale(.6)");
+            $(".size-img").text("1200x600 px");
+        } else if (window.location.href.indexOf("frame1920x1080") > -1) {
+            $(".block__").css("transform", "scale(.4)");
+            $(".size-img").text("1920x1080 px");
+        } else if (window.location.href.indexOf("frame600x1200") > -1) {
+            $(".block__").css("transform", "scale(.5)");
+            $(".size-img").text("600x1200 px");
+        } else if (window.location.href.indexOf("frame1024x768") > -1) {
+            $(".block__").css("transform", "scale(.7)");
+            $(".size-img").text("1024x768 px");
+        } else if (window.location.href.indexOf("frame2480x3505") > -1) {
+            $(".block__").css("transform", "scale(.2)");
+            $(".size-img").text("2480x3505 px");
+        } else if (window.location.href.indexOf("frame1004x591") > -1) {
+            $(".block__").css("transform", "scale(.8)");
+            $(".size-img").text("1004x591 px");
+        } else if (window.location.href.indexOf("frame1748x1240") > -1) {
+            $(".block__").css("transform", "scale(.4)");
+            $(".size-img").text("1748x1240 px");
+        } else if (window.location.href.indexOf("frame600x200") > -1) {
+            $(".block__").css("transform", "scale(1)");
+            $(".size-img").text("600x200 px");
+        } else if (window.location.href.indexOf("frame1500x500") > -1) {
+            $(".block__").css("transform", "scale(.6)");
+            $(".size-img").text("1500x500 px");
+        } else if (window.location.href.indexOf("frame1600x400") > -1) {
+            $(".block__").css("transform", "scale(.6)");
+            $(".size-img").text("1600x400 px");
+        } else if (window.location.href.indexOf("frame1128x191") > -1) {
+            $(".block__").css("transform", "scale(.8)");
+            $(".size-img").text("1128x191 px");
+        } else if (window.location.href.indexOf("frame1200x480") > -1) {
+            $(".block__").css("transform", "scale(.8)");
+            $(".size-img").text("1200x480 px");
+        }
+
+    })
+})
+
+var canvas =
+    (window.location.href.indexOf("frame1080x1080") > -1) ? new fabric.Canvas('c', {
+        preserveObjectStacking: true,
+        width: 1080,
+        height: 1080,
+    }) : (window.location.href.indexOf("frame1080x1920") > -1) ? new fabric.Canvas('c', {
+        preserveObjectStacking: true,
+        width: 1080,
+        height: 1920,
+    }) : (window.location.href.indexOf("frame940x788") > -1) ? new fabric.Canvas('c', {
+        preserveObjectStacking: true,
+        width: 940,
+        height: 788,
+    }) : (window.location.href.indexOf("frame1191x1684") > -1) ? new fabric.Canvas('c', {
+        preserveObjectStacking: true,
+        width: 1191,
+        height: 1684,
+    }) : (window.location.href.indexOf("frame1280x720") > -1) ? new fabric.Canvas('c', {
+        preserveObjectStacking: true,
+        width: 1280,
+        height: 720,
+    }) : (window.location.href.indexOf("frame800x800") > -1) ? new fabric.Canvas('c', {
+        preserveObjectStacking: true,
+        width: 800,
+        height: 800,
+    }) : (window.location.href.indexOf("frame851x315") > -1) ? new fabric.Canvas('c', {
+        preserveObjectStacking: true,
+        width: 851,
+        height: 315,
+    }) : (window.location.href.indexOf("frame2560x1440") > -1) ? new fabric.Canvas('c', {
+        preserveObjectStacking: true,
+        width: 2560,
+        height: 1440,
+    }) : (window.location.href.indexOf("frame735x1102") > -1) ? new fabric.Canvas('c', {
+        preserveObjectStacking: true,
+        width: 735,
+        height: 1102,
+    }) : (window.location.href.indexOf("frame1200x628") > -1) ? new fabric.Canvas('c', {
+        preserveObjectStacking: true,
+        width: 1200,
+        height: 628,
+    }) : (window.location.href.indexOf("frame1024x512") > -1) ? new fabric.Canvas('c', {
+        preserveObjectStacking: true,
+        width: 1024,
+        height: 512,
+    }) : (window.location.href.indexOf("frame1200x600") > -1) ? new fabric.Canvas('c', {
+        preserveObjectStacking: true,
+        width: 1200,
+        height: 600,
+    }) : (window.location.href.indexOf("frame1920x1080") > -1) ? new fabric.Canvas('c', {
+        preserveObjectStacking: true,
+        width: 1920,
+        height: 1080,
+    }) : (window.location.href.indexOf("frame600x1200") > -1) ? new fabric.Canvas('c', {
+        preserveObjectStacking: true,
+        width: 600,
+        height: 1200,
+    }) : (window.location.href.indexOf("frame1024x768") > -1) ? new fabric.Canvas('c', {
+        preserveObjectStacking: true,
+        width: 1024,
+        height: 768,
+    }) : (window.location.href.indexOf("frame2480x3505") > -1) ? new fabric.Canvas('c', {
+        preserveObjectStacking: true,
+        width: 2480,
+        height: 3505,
+    }) : (window.location.href.indexOf("frame1004x591") > -1) ? new fabric.Canvas('c', {
+        preserveObjectStacking: true,
+        width: 1004,
+        height: 591,
+    }) : (window.location.href.indexOf("frame1748x1240") > -1) ? new fabric.Canvas('c', {
+        preserveObjectStacking: true,
+        width: 1748,
+        height: 1240,
+    }) : (window.location.href.indexOf("frame600x200") > -1) ? new fabric.Canvas('c', {
+        preserveObjectStacking: true,
+        width: 600,
+        height: 200,
+    }) : (window.location.href.indexOf("frame1500x500") > -1) ? new fabric.Canvas('c', {
+        preserveObjectStacking: true,
+        width: 1500,
+        height: 500,
+    }) : (window.location.href.indexOf("frame1600x400") > -1) ? new fabric.Canvas('c', {
+        preserveObjectStacking: true,
+        width: 1600,
+        height: 400,
+    }) : (window.location.href.indexOf("frame1128x191") > -1) ? new fabric.Canvas('c', {
+        preserveObjectStacking: true,
+        width: 1128,
+        height: 191,
+    }) : (window.location.href.indexOf("frame1200x480") > -1) ? new fabric.Canvas('c', {
+        preserveObjectStacking: true,
+        width: 1200,
+        height: 480,
+    }) : new fabric.Canvas('c', {
+        preserveObjectStacking: true,
+        width: 500,
+        height: 500,
+    });
+
+
+
+// VSE SHO NISHE NE PEREZATIRAT  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+       document.addEventListener('DOMContentLoaded', function() {
+           jQuery(document).ready(function($) {
+            
+              if (window.location.href.indexOf("open") > -1) {
+                  $('.left__menu').addClass('active');
+                  $('.left__background ').addClass('active');
+              }
+            
+           });
+        });
+        //console.log(canvas);
+
+
+
+
+        var deleteIcon = "data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg version='1.1' id='Ebene_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='595.275px' height='595.275px' viewBox='200 215 230 470' xml:space='preserve'%3E%3Ccircle style='fill:%23F44336;' cx='299.76' cy='439.067' r='218.516'/%3E%3Cg%3E%3Crect x='267.162' y='307.978' transform='matrix(0.7071 -0.7071 0.7071 0.7071 -222.6202 340.6915)' style='fill:white;' width='65.545' height='262.18'/%3E%3Crect x='266.988' y='308.153' transform='matrix(0.7071 0.7071 -0.7071 0.7071 398.3889 -83.3116)' style='fill:white;' width='65.544' height='262.179'/%3E%3C/g%3E%3C/svg%3E";
+        var img = document.createElement('img');
+        img.src = deleteIcon;
+        fabric.Object.prototype.cornerColor = '#E5E5E5';
+        fabric.Object.prototype.transparentCorners = false;
+
+
+        // add rectangle
+
+
+        function addRect() {
+            var rect = new fabric.Rect({
+                left: 100,
+                top: 150,
+                fill: 'yellow',
+                width: 200,
+                height: 100,
+                objectCaching: false,
+                strokeWidth: 4,
+            });
+
+            canvas.add(rect);
+            canvas.setActiveObject(rect);
+        }
+
+
+
+        // add text
+
+        var headingText = "Heading";
+
+        function addText() {
+            var itext = new fabric.IText(headingText, {
+                top: 150,
+                fontFamily: 'Poppins',
+                fill: '#131313',
+                selectable: true
+            });
+            canvas.add(itext);
+            itext.centerH();
+            canvas.setActiveObject(itext);
+
+        }
+
+        var headingDescription = "test description";
+
+        function addDescription() {
+            var idescription = new fabric.IText(headingDescription, {
+                top: 220,
+                fill: '#131313',
+                selectable: true
+            });
+
+            canvas.add(idescription);
+            idescription.centerH();
+            canvas.setActiveObject(idescription);
+        }
+
+        var headingLink = "test link";
+
+        function addLink() {
+            var ilink = new fabric.IText(headingLink, {
+                top: 300,
+                fill: '#131313',
+                selectable: true
+            });
+
+            canvas.add(ilink);
+            ilink.centerH();
+            canvas.setActiveObject(ilink);
+        }
+
+
+
+        // upload image
+        function uploadImage(e) {
+            console.log('ee', e)
+            var file = e.target.files[0];
+            var reader = new FileReader();
+            reader.onload = function(f) {
+                var data = f.target.result;
+                fabric.Image.fromURL(data, function(img) {
+                    img.scaleToWidth(300);
+                    var oImg = img.set({
+                        left: 0,
+                        top: 0,
+                        angle: 0,
+                    });
+
+                    canvas.add(oImg).renderAll();
+                    var a = canvas.setActiveObject(oImg);
+                    var dataURL = canvas.toDataURL({
+                        format: 'png',
+                        quality: 0.8
+                    });
+
+                });
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function importJson(e) {}
+        // upload svg
+        function uploadSVG(e) {
+            var url = URL.createObjectURL(e.target.files[0]);
+            fabric.loadSVGFromURL(url, function(objects, options) {
+                objects.forEach(function(svg) {
+                    svg.set({
+                        top: 90,
+                        left: 90,
+                        originX: 'center',
+                        originY: 'center'
+                    });
+
+                    svg.scaleToWidth(50);
+                    canvas.add(svg).renderAll();
+                });
+            });
+        }
+        // use modal images
+        function addStockImg(e) {
+            var imgObj = e.srcElement.currentSrc;
+
+            fabric.Image.fromURL(imgObj, function(img) {
+                img.scaleToWidth(300);
+                var oImg = img.set({
+                    left: 0,
+                    top: 0,
+                    angle: 0,
+                    id: "00ab"
+                });
+
+                canvas.add(oImg).renderAll();
+                document.location.href = "#"
+                canvas.sendBackwards(oImg);
+            });
+        }
+
+        function exportToSvg() {
+            var exportSvg = canvas.toSVG();
+            localStorage.setItem('svg', exportSvg);
+            var json_data = JSON.stringify(canvas.toDatalessJSON());
+            console.log(json_data);
+            var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(json_data);
+            document.querySelector('#list').innerHTML = '<a href="" id="downloadAnchorElem"></a>';
+            var dlAnchorElem = document.getElementById('downloadAnchorElem');
+            dlAnchorElem.setAttribute("href", dataStr);
+            dlAnchorElem.setAttribute("download", "scene.json");
+            dlAnchorElem.click();
+            console.log(canvas);
+            console.log(dlAnchorElem);
+        }
+
+
+        fabric.Object.prototype.controls.deleteControl = new fabric.Control({
+            x: 0.5,
+            y: -0.5,
+            offsetY: 16,
+            cursorStyle: 'pointer',
+            mouseUpHandler: deleteObject,
+            render: renderIcon,
+            cornerSize: 24
+        });
+
+        function deleteObject(eventData, target) {
+            var canvas = target.canvas;
+            canvas.remove(target);
+            canvas.requestRenderAll();
+        }
+
+        function renderIcon(ctx, left, top, styleOverride, fabricObject) {
+            var size = this.cornerSize;
+            ctx.save();
+            ctx.translate(left, top);
+            ctx.rotate(fabric.util.degreesToRadians(fabricObject.angle));
+            ctx.drawImage(img, -size / 2, -size / 2, size, size);
+            ctx.restore();
+        }
+
+
+//        var imgSrc = [{
+//            img: "https://unsplash.it/400/500?random",
+//            name: "Item 1",
+//            price: "4€"
+//        }, {
+//            img: "https://unsplash.it/500/500?random",
+//            name: "Item 2",
+//            price: "4€"
+//        }, {
+//            img: "https://unsplash.it/500/400?random",
+//            name: "Item 3",
+//            price: "4€"
+//        }, {
+//            img: "https://unsplash.it/500/300?random",
+//            name: "Item 4",
+//            price: "3€"
+//        }];
+//        var girlSrc = [{
+//            img: "https://drawinghowtos.com/wp-content/uploads/2019/11/unicorn-colored.png",
+//            name: "Licorne",
+//            price: "5€"
+//        }, {
+//            img: "https://i.pinimg.com/originals/69/64/94/69649494d972df188fbbd2f15988419c.png",
+//            name: "Papillon",
+//            price: "2€"
+//        }, {
+//            img: "https://dbdzm869oupei.cloudfront.net/img/sticker/preview/12597.png",
+//            name: "Fleur de cerisier",
+//            price: "5€"
+//        }];
+//        var illuSrc = [{
+//            img: "https://isometric.online/wp-content/uploads/2020/05/people_svg.svg",
+//            name: "People",
+//            price: "5€"
+//        }, {
+//            img: "https://isometric.online/wp-content/uploads/2020/04/fitness_svg.svg",
+//            name: "Fitness",
+//            price: "5€"
+//        }, {
+//            img: "https://isometric.online/wp-content/uploads/2020/04/instagram_svg.svg",
+//            name: "Instagram",
+//            price: "4€"
+//        }, {
+//            img: "https://isometric.online/wp-content/uploads/2020/04/tv_svg.svg",
+//            name: "Télévision",
+//            price: "3€"
+//        }];
+//
+//
+//        function changeImgSrc(src) {
+//            // Setup the HTML string
+//            var html = '';
+//
+//            // Loop through each wizard and create a list item
+//            src.forEach(function(item) {
+//                html += '<li class="item-modal"><img class="img-stock" src="' + item.img + '" onclick="addStockImg(event)" alt="image asset" width="400" height="500"/></div></li>';
+//            });
+//
+//            document.querySelector('#list').innerHTML = html;
+//        }
+
+//        changeImgSrc(imgSrc)
+
+        var toggle = document.getElementById('toggle');
+        var toggleContainer = document.getElementById('toggle-container');
+        var importInput = document.getElementById('largeFile');
+        var toggleNumber;
+
+        toggle.addEventListener('click', function() {
+            toggleNumber = !toggleNumber;
+            if (toggleNumber) {
+                toggleContainer.style.clipPath = 'inset(0 -1px -1px 50%)';
+                toggleContainer.style.backgroundColor = '#131313';
+                importInput.style.pointerEvents = 'auto';
+            } else {
+                toggleContainer.style.clipPath = 'inset(0 50% -1px -1px)';
+                toggleContainer.style.backgroundColor = '#131313';
+                importInput.style.pointerEvents = 'none';
+            }
+            //    console.log(toggleNumber)
+        });
+
+        var fileLoaded
+        var loadFile = function(event) {
+            fileLoaded = event
+            var output = document.getElementById('output');
+            output.src = URL.createObjectURL(event.target.files[0]);
+            output.onload = function() {
+                URL.revokeObjectURL(output.src) // free memory
+            }
+        };
+
+     
+       document.addEventListener('DOMContentLoaded', function() {
+           jQuery(document).ready(function($) {
+     
+            $("#importFile").click(function() {
+                uploadImage(fileLoaded)
+                document.location.href = "#"
+            });
+
+            $("#importSVG").click(function() {
+                uploadSVG(fileLoaded)
+                document.location.href = "#"
+            });
+
+            $("#importJson").click(function() {
+                console.log('e', fileLoaded.target.files[0])
+                var json = fileLoaded.target.files[0]
+                    //uploadJson(fileLoaded)
+                var result
+                var formatted
+                var fr = new FileReader();
+                fr.onload = function(e) {
+                    console.log("2", e);
+                    result = JSON.parse(e.target.result);
+                    console.log("result", result);
+                    formatted = JSON.stringify(result, null, 2);
+                    console.log("formatted", formatted);
+
+                    loadJson(formatted)
+                }
+
+                fr.readAsText(json);
+                document.location.href = "#"
+            });
+            
+           });
+        });
+
+        function importFile() {
+            uploadImage(fileLoaded)
+            document.location.href = "#"
+        }
+
+        function importSVG() {
+            uploadSVG(fileLoaded)
+            document.location.href = "#"
+        }
+
+        function importJson() {
+            console.log('e', fileLoaded.target.files[0])
+            var json = fileLoaded.target.files[0]
+                //uploadJson(fileLoaded)
+            var result
+            var formatted
+            var fr = new FileReader();
+            fr.onload = function(e) {
+                console.log("2", e);
+                result = JSON.parse(e.target.result);
+                console.log("result", result);
+                formatted = JSON.stringify(result, null, 2);
+                console.log("formatted", formatted);
+
+                loadJson(formatted)
+            }
+
+            fr.readAsText(json);
+            document.location.href = "#"
+        }
+
+        function loadJson(formatted) {
+            console.log('here');
+            canvas.loadFromJSON(formatted, function(obj) {
+                console.log(' this is a callback. invoked when canvas is loaded!xxx ');
+                canvas.renderAll();
+
+            });
+        }
+
+
+
+
+        //     let textObject = canvas.item(0);
+        //canvas.setActiveObject(textObject);
+        //textObject.enterEditing();
+
+        // Edit Text
+        //document.getElementById("text-color").addEventListener("change", (event) => {
+        //	canvas.getActiveObject().set("fill", event.target.value);
+        //	canvas.renderAll();
+        //});
+        //document.getElementById("font-family").addEventListener("change", (event) => {
+        //	canvas.getActiveObject().set("fontFamily", event.target.value);
+        //	canvas.renderAll();
+        //});
+        //document
+        //	.getElementById("text-font-size")
+        //	.addEventListener("change", (event) => {
+        //		canvas.getActiveObject().set("fontSize", event.target.value);
+        //		canvas.renderAll();
+        //	});
+        //document
+        //	.getElementById("text-line-height")
+        //	.addEventListener("change", (event) => {
+        //		canvas.getActiveObject().set("lineHeight", event.target.value);
+        //		canvas.renderAll();
+        //	});
+        //document.getElementById("text-align").addEventListener("change", (event) => {
+        //	canvas.getActiveObject().set("textAlign", event.target.value);
+        //	canvas.renderAll();
+        //});
+
+        var fontTypeProps = document.getElementsByName("fonttype");
+
+        for (var i = 0, max = fontTypeProps.length; i < max; i += 1) {
+            fontTypeProps[i].onclick = function() {
+                var canvasActiveObj = canvas.getActiveObject();
+                if (document.getElementById(this.id).checked == true) {
+                    if (this.id === "text-cmd-bold") {
+                        canvasActiveObj.set("fontWeight", "bold");
+                    }
+                    if (this.id === "text-cmd-italic") {
+                        canvasActiveObj.set("fontStyle", "italic");
+                    }
+                    if (this.id === "text-cmd-underline") {
+                        canvasActiveObj.set("underline", true);
+                    }
+                    if (this.id === "text-cmd-linethrough") {
+                        canvasActiveObj.set("linethrough", true);
+                    }
+                    if (this.id === "text-cmd-overline") {
+                        canvasActiveObj.set("overline", true);
+                    }
+                 
+                 
+                   if(this.id == "text-cmd-left") {
+                     canvas.getActiveObject().set("textAlign", "left");
+                   }
+                   if(this.id == "text-cmd-center") {
+                     canvas.getActiveObject().set("textAlign", "center");
+                   }
+                   if(this.id == "text-cmd-right") {
+                     canvas.getActiveObject().set("textAlign", "right");
+                   }
+//                   if(this.id == "text-cmd-justify") {
+//                     canvas.getActiveObject().set("textAlign", "justify");
+//                   }
+                 
+                } else {
+                    if (this.id === "text-cmd-bold") {
+                        canvasActiveObj.set("fontWeight", "");
+                    }
+                    if (this.id === "text-cmd-italic") {
+                        canvasActiveObj.set("fontStyle", "");
+                    }
+                    if (this.id === "text-cmd-underline") {
+                        canvasActiveObj.set("underline", false);
+                    }
+                    if (this.id === "text-cmd-linethrough") {
+                        canvasActiveObj.set("linethrough", false);
+                    }
+                    if (this.id === "text-cmd-overline") {
+                        canvasActiveObj.set("overline", false);
+                    }
+                 
+                   if(this.id == "text-cmd-left") {
+                     canvas.getActiveObject().set("textAlign", "");
+                   }
+                   if(this.id == "text-cmd-center") {
+                     canvas.getActiveObject().set("textAlign", "");
+                   }
+                   if(this.id == "text-cmd-right") {
+                     canvas.getActiveObject().set("textAlign", "");
+                   }
+                 
+                }
+                canvas.renderAll();
+                console.info(canvasActiveObj);
+            };
+        }
+
+        // Do some initializing stuff
+        fabric.Object.prototype.set({
+            transparentCorners: true,
+            cornerColor: "#22A7F0",
+            borderColor: "#22A7F0",
+            cornerSize: 12,
+            padding: 5
+        });
+
+
+
+                var objType
+        
+                function switchDisplayFont(obj) {
+//                    alert('dsds');
+             
+
+                    switch (objType) {
+
+                        case 'i-text':
+                            var obj = canvas.getActiveObject();
+//                            var bold = document.getElementById('text-cmd-bold');
+//                            var italic = document.getElementById('text-cmd-italic');
+                            var gradient = document.getElementById('gradient');
+                            document.getElementById("gradient").value = obj.fill;
+                      
+                      
+//                            var color = document.getElementById('color-selected');
+                            node = document.querySelector('.item-selected');
+                            node.classList.add("visible");
+//                            color.style.backgroundColor = obj.fill
+                        
+                      console.log(obj.fill);
+//                            if (obj.fontWeight === 'bold') {
+//                                bold.checked = true
+//                            } else {
+//                                bold.checked = false
+//                            }
+//                            if (obj.fontStyle === 'italic') {
+//                                italic.checked = true
+//                            } else {
+//                                italic.checked = false
+//                            }
+                            break;
+                        case 'image':
+                            node = document.getElementById('image');
+                            node.classList.add("visible");
+                            break;
+                        case 'rect':
+                            node = document.getElementById('image');
+                            node.classList.add("visible");
+                            break;
+                        default:
+                            console.log(`Sorry, we are out of`);
+                    }
+                }
+
+        function onObjectSelected() {
+            //            alert('onObjectSelected');
+            var node;
+            // check if type is a property of active element
+            console.log('canvas.getActiveObject()', canvas.getActiveObject())
+            objType = (canvas.getActiveObject().type ? canvas.getActiveObject().type : "");
+            switchDisplayFont(objType)
+        }
+
+        function onObjectCleared() {
+            var node;
+            var elements = document.getElementsByClassName('item-selected');
+            clear()
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].classList.remove('visible');
+            }
+        }
+
+        function onObjectUpdated() {
+            var node;
+            var elements = document.getElementsByClassName('item-selected');
+            back()
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].classList.remove('visible');
+            }
+            // check if type is a property of active element
+            objType = (canvas.getActiveObject().type ? canvas.getActiveObject().type : "");
+            switchDisplayFont(objType)
+        }
+
+
+        canvas.on('selection:created', onObjectSelected);
+        canvas.on('selection:cleared', onObjectCleared);
+        canvas.on('selection:updated', onObjectUpdated);
+
+        //        radios5 = document.getElementsByName("fonttype");
+        //        for (var i = 0, max = radios5.length; i < max; i++) {
+        //            radios5[i].onclick = function() {
+        //             
+        //             
+        //         if(document.getElementById(this.id).checked == true) {
+        //                if(this.id == "text-cmd-bold") {
+        //                    canvas.getActiveObject().set("fontWeight", "bold");
+        //                }
+        //                if(this.id == "text-cmd-italic") {
+        //                    canvas.getActiveObject().set("fontStyle", "italic");
+        //                }
+        //                if(this.id == "text-cmd-underline") {
+        //                    canvas.getActiveObject().set("textDecoration", "underline");
+        //                }
+        //				if(this.id == "text-cmd-linethrough") {
+        //                    canvas.getActiveObject().set("textDecoration", "line-through");
+        //                }
+        //				if(this.id == "text-cmd-overline") {
+        //                    canvas.getActiveObject().set("textDecoration", "overline");
+        //                }
+        //                
+        //                
+        //                
+        //            } else {
+        //                if(this.id == "text-cmd-bold") {
+        //                    canvas.getActiveObject().set("fontWeight", "");
+        //                }
+        //                if(this.id == "text-cmd-italic") {
+        //                    canvas.getActiveObject().set("fontStyle", "");
+        //                }  
+        //                if(this.id == "text-cmd-underline") {
+        //                    canvas.getActiveObject().set("textDecoration", "");
+        //                }
+        //				if(this.id == "text-cmd-linethrough") {
+        //                    canvas.getActiveObject().set("textDecoration", "");
+        //                }  
+        //                if(this.id == "text-cmd-overline") {
+        //                    canvas.getActiveObject().set("textDecoration", "");
+        //                }
+        //            }
+        //
+        //                canvas.renderAll();
+        //            }
+        //        }
+        //     
+
+     // Edit Text
+       document.getElementById("fill-color").addEventListener("change", (event) => {
+          var  ryy = canvas.getActiveObject().set("fill", event.target.value);
+          document.getElementById("gradient").value = ryy.fill;
+          canvas.renderAll();
+       });
+
+//     // Edit Text
+//document.getElementById("text-color").addEventListener("change", (event) => {
+//	canvas.getActiveObject().set("fill", event.target.value);
+//	canvas.renderAll();
+//});
+
+//        document.getElementById('fill-color').onchange = function() {
+//             canvas.getActiveObject().set("fill", this.value);
+//            console.log(canvas.getActiveObject().set("fill", this.value));
+//            canvas.renderAll();
+//        };
+        //document.getElementById('text-color').onchange = function() {
+        // canvas.getActiveObject().set("fill", this.value);
+        // canvas.renderAll();
+        //};
+
+        document.getElementById('font-family').onchange = function() {
+            canvas.getActiveObject().set("fontFamily", this.value);
+            canvas.renderAll();
+        };
+
+        document.getElementById('font-size').onchange = function() {
+            canvas.getActiveObject().set("fontSize", this.value);
+            canvas.renderAll();
+        };
+     
+     
+     
+       document.addEventListener('DOMContentLoaded', function() {
+           jQuery(document).ready(function($) {
+
+             $("#color-select").click(function() {
+                 let colorList = ["131313", "FFFFFF", "192F97", "D41C3B", "FF9090", "A92355", "E35110"]
+                 var general = document.getElementById('general-controls');
+                 general.classList.add("display");
+                 node = document.getElementById('color-controls');
+                 node.classList.add("display");
+                 listColor(colorList)
+             });
+
+          });
+       });
+
+        function back() {
+            objType = (canvas.getActiveObject().type ? canvas.getActiveObject().type : "");
+            switchDisplayFont(objType)
+            var general = document.getElementById('general-controls');
+            general.classList.remove("display");
+            node = document.getElementById('color-controls');
+            node.classList.remove("display");
+        }
+
+
+        function clear() {
+            var general = document.getElementById('general-controls');
+            general.classList.remove("display");
+            node = document.getElementById('color-controls');
+            node.classList.remove("display");
+        }
+
+        function listColor(src) {
+            console.log(src)
+                // Setup the HTML string
+            var html = '';
+            var currentColor = canvas.getActiveObject().fill
+                // Loop through each color and create a list item
+            src.forEach(function(item) {
+                if ('#' + item === currentColor) {
+                    html += '<div class="color-item active" id="' + item + '" style="background-color:#' + item + ';" onclick="changeColor(\'' + item + '\')"></div>';
+                } else {
+                    html += '<div class="color-item" id="' + item + '" style="background-color:#' + item + ';" onclick="changeColor(\'' + item + '\')"></div>';
+                }
+
+            });
+
+            document.querySelector('#color-list').innerHTML = html;
+        }
+
+        function changeColor(color) {
+            elements = document.getElementsByClassName("color-item")
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].classList.remove("active");
+            }
+            canvas.getActiveObject().set("fill", "#" + color);
+            canvas.renderAll();
+            var node = document.getElementById(color);
+            node.classList.add("active")
+        }
+
+        var orderStatus = false;
+
+
+        if (orderStatus === false) {
+
+//            fabric.Image.fromURL('img/votemark.png', function(oImg) {
+            fabric.Image.fromURL( location.protocol + "//" + location.host + '/wp-content/themes/astra-child/assets/img/votemark.png', function(oImg) {
+                oImg.set({
+
+                    top: 0,
+                    left: 0,
+                    width: 700,
+                    height: 500,
+
+                    originX: 'left',
+                    originY: 'top',
+                    cornerSize: 15,
+                    hasRotatingPoint: false,
+                    perPixelTargetFind: false,
+                    hasControls: false,
+                    hoverCursor: true,
+                    lockRotation: false,
+
+                    hoverCursor: 'pointer',
+                    selection: false,
+
+
+                });
+
+                oImg.perPixelTargetFind = true;
+                oImg.hasControls = oImg.hasBorders = false;
+
+                oImg.evented = false;
+                canvas.add(oImg);
+            });
+
+
+            canvas.on('mouse:down', function(oImg) {
+                var evt = oImg.e;
+                if (evt.altKey === true) {
+                    this.isDragging = false;
+                    this.selection = false;
+                    this.lastPosX = evt.clientX;
+                    this.lastPosY = evt.clientY;
+                }
+            });
+
+        }
+     
+    </script>
+
+</body>
+
+</html>
